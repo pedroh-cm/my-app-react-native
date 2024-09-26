@@ -55,7 +55,7 @@ export function Icon({ name, color = 'backgroundContrast', size, onPress }: Icon
             <Pressable hitSlop={10} onPress={onPress}>
                 <SVGIcon color={colors[color]} size={size} />
             </Pressable>
-       )
+       );
     }
 
     return <SVGIcon color={colors[color]} size={size} />;

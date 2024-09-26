@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
-import { Pressable, TextInput as RNTextInput, TextInputProps as RNTextInputProps, TextStyle } from "react-native";
+import React, { useRef } from 'react';
+import { Pressable, TextInput as RNTextInput, TextInputProps as RNTextInputProps, TextStyle } from 'react-native';
 
-import { Box, BoxProps } from "../Box/Box";
-import { $fontFamily, $fontSizes, Text } from "../Text/Text";
-import { useAppTheme } from "../../hooks/useAppTheme";
+import { Box, BoxProps } from '../Box/Box';
+import { $fontFamily, $fontSizes, Text } from '../Text/Text';
+import { useAppTheme } from '../../hooks/useAppTheme';
 
 export interface TextInputProps extends RNTextInputProps {
     label: string
@@ -22,7 +22,7 @@ export function TextInput({ label, errorMessage, RightComponent, boxProps, ...rn
         padding: 's16',
         borderRadius: 's12',
         flexDirection: 'row',
-    }
+    };
 
     function focusInput() {
         inputRef.current?.focus();
@@ -49,7 +49,7 @@ export function TextInput({ label, errorMessage, RightComponent, boxProps, ...rn
                 {errorMessage && <Text preset="paragraphSmall" bold color="error">{errorMessage}</Text>}
             </Pressable>
         </Box>
-    )
+    );
 }
 
 const $textInputStyle: TextStyle = {
@@ -57,5 +57,5 @@ const $textInputStyle: TextStyle = {
     fontFamily: $fontFamily.regular,
     flexGrow: 1,
     flexShrink: 1,
-    ...$fontSizes.paragraphMedium
-}
+    ...$fontSizes.paragraphMedium,
+};

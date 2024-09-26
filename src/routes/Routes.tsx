@@ -24,7 +24,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export function Router() {
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="LoginScreen" 
+        <Stack.Navigator initialRouteName="LoginScreen"
             screenOptions={
                 { headerShown: false, fullScreenGestureEnabled: true }
             }
@@ -35,5 +35,5 @@ export function Router() {
             <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
         </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
