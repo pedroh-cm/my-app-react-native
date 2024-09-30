@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { ActivityIndicator, TouchableBox, TouchableBoxProps, Text } from '@components'
+import { ActivityIndicator, TouchableBox, TouchableBoxProps, Text } from '@components';
+
 import { buttonPresets } from './buttonPresets';
 
 export type ButtonPreset = 'primary' | 'outline';

@@ -1,11 +1,12 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+
 import { zodResolver } from '@hookform/resolvers/zod';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useForm } from 'react-hook-form';
 
-import { useResetNavigationSuccess } from '@hooks';
 
 import { Screen, Text, Button, FormTextInput, FormPasswordInput } from '@components';
+import { useResetNavigationSuccess } from '@hooks';
 import { RootStackParamList } from '@routes';
 
 import { signUpSchema, signUpSchemaType } from './signUpSchema';
