@@ -8,7 +8,7 @@ import {
   Icon,
   Text,
   TextProps,
-  TouchableBox,
+  TouchableOpacityBox,
   TouchableBoxProps,
 } from '@components';
 import {useAppSafeArea} from '@hooks';
@@ -49,13 +49,14 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
         };
 
         return (
-          <TouchableBox
+          <TouchableOpacityBox
             {...$itemWrapper}
             accessibilityState={isFocused ? {selected: true} : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
+            key={route.key}
             style={{flex: 1}}>
             <Icon
               name={tabItem.icon[isFocused ? 'focused' : 'unfocused']}
@@ -66,7 +67,7 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
               {...$label}>
               {tabItem.label}
             </Text>
-          </TouchableBox>
+          </TouchableOpacityBox>
         );
       })}
     </Box>
